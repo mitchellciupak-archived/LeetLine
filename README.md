@@ -8,3 +8,5 @@ A CLI created in Ruby to help me quiz myself on questions from Leetcode or Crack
 
 ## Resources
 [1](https://thoughtbot.com/upcase/videos/lets-build-a-cli)
+
+[2](https://www.rubyguides.com/2018/12/ruby-argv/)
