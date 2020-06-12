@@ -1,5 +1,5 @@
 # LeetLine
-A CLI created in Ruby to help me quiz myself on questions from Leetcode or Cracking the Coding Interview.
+A CLI created in Python to help me quiz myself on questions from Leetcode or Cracking the Coding Interview.
 
 # Procedure
 1. Answer a question
