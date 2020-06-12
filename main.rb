@@ -6,7 +6,13 @@ require "Thor"
 require "PStore"
 
 class LeetLine < Thor
-    ## Constuctor to Show List of Options
+    
+    #Contructor
+    def initialize    
+        puts "Please Select from the following options"
+        puts "Add"   
+    end 
+
 
     ## Features
     ### Add
