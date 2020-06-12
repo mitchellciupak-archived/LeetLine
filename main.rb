@@ -6,6 +6,17 @@ require "Thor"
 require "PStore"
 
 class LeetLine < Thor
+    ## Constuctor to Show List of Options
+
+    ## Features
+    ### Add
+    #### Breaks into Item class 
+    ### Remove
+    #### Params: ID
+    ### List
+    #### Params: All(Default), Recent(Top 15), Longest(Top 15)
+    ### Select
+    #### Params: Random(Default), ID, String
 
     # ADD
     ## Desciption
@@ -24,7 +35,7 @@ class LeetLine < Thor
         end
     end
 
-    
+
 end
 
 
