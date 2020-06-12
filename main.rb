@@ -5,21 +5,27 @@
 require "Thor"
 require "PStore"
 
-class TODOApp < Thor
-    desc "add_task NAME", "ask a new task to your TODO"
+class LeetLine < Thor
 
-    def add_task(name)
+    # ADD
+    ## Desciption
+    desc "add NAME", "Add Question and Anwser to Library"
+    ## Definition
+    def add(name)
         PStore.new("/tmp/task.txt").transation { |store| store[name] = true}
     end
 
-    desc "list_task", "list all tasks on your TODO"
+    
+    desc "list", "list all tasks on your TODO"
 
-    def list_task(name)
+    def list(name)
         PStore.new("/tmp/task.txt").transation do |store|
             store.roots.each_with_index { |task,idx| puts"#{idx+1}.#{task}"}
         end
     end
+
+    
 end
 
 
-TODOApp.start(ARGV)
+LeetLine.start(ARGV)
