@@ -1,18 +1,36 @@
 import sys
 #from .classmodule import MyClass
-#from .funcmodule import my_function
 
 ## https://code.visualstudio.com/docs/python/python-tutorial
 ## https://trstringer.com/easy-and-nice-python-cli/
 
-def main():
-    print('in main')
-    args = sys.argv[1:]
-    print('count of args :: {}'.format(len(args)))
-    for arg in args:
-        print('passed argument :: {}'.format(arg))
+class ll: 
+    # default constructor 
+    def __init__(self): 
+        self.geek = "GeekforGeeks"
+  
+    # a method for printing data members 
+    def print_Geek(self): 
+        print(self.geek) 
+  
 
-    #my_function('hello world')
+def my_function(text_to_display):
+    print('text from my_function :: {}'.format(text_to_display))
+
+def main():
+
+    #init
+    obj = ll()
+
+    #Debug
+    #print('in main')
+    #args = sys.argv[1:]
+    #print('count of args :: {}'.format(len(args)))
+    #for arg in args:
+    #    print('passed argument :: {}'.format(arg))
+
+
+    my_function('hello world')
 
     #my_object = MyClass('Thomas')
     #my_object.say_name()
