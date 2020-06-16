@@ -21,6 +21,4 @@ A CLI created in Python to help quiz yourself on questions from Leetcode or Crac
 3. Review the quesition on LeetLine later or randomly come accros it when using the randomier functionality
 
 ## Resources
-[Python CLI Tutorial #1](https://trstringer.com/easy-and-nice-python-cli/)
-
 [LeetLine Wiki](https://github.com/mitchellciupak/LeetLine/wiki)
