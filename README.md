@@ -6,6 +6,8 @@ A CLI created in Python to help me quiz myself on questions from Leetcode or Cra
 * Timing and Ranking
 * Easy Code Implamentation (C/C++ or Python)
 * Pomodoro Technique Timer
+* Progress Tracking and Reports
+* Random Question Selector
 
 # Procedure
 1. Answer a question
