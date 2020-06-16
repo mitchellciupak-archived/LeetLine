@@ -2,8 +2,9 @@
 A CLI created in Python to help quiz yourself on questions from Leetcode or Cracking the Coding Interview.
 
 ## Contributers
-### Paired Programing
+##### Paired Programing
 [Mitchell Ciupak](https://github.com/mitchellciupak)
+
 [Mason Webb](https://github.com/masonwebb33)
 
 ## Features
