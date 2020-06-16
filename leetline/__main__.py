@@ -8,6 +8,7 @@ import creation_date from datetime.py
 class ll: 
     # default constructor 
     def __init__(self): 
+        self.datetime = creation_date()
         self.name = "Problem"
   
     # a method for printing data members 
