@@ -2,6 +2,8 @@ import sys
 import creation_date from datetime.py
 #from .classmodule import MyClass
 
+## TODO Need Categories like Trees or Something 
+
 ## https://code.visualstudio.com/docs/python/python-tutorial
 ## https://trstringer.com/easy-and-nice-python-cli/
 
