@@ -4,7 +4,7 @@ A CLI created in Python to help me quiz myself on questions from Leetcode or Cra
 # Features
 * File/Project Storage
 * Timing and Ranking
-* Easy Code Implamentation
+* Easy Code Implamentation (C/C++ or Python)
 * Pomodoro Technique Timer
 
 # Procedure
