@@ -7,11 +7,11 @@ import sys
 class ll: 
     # default constructor 
     def __init__(self): 
-        self.geek = "GeekforGeeks"
+        self.name = "Problem"
   
     # a method for printing data members 
     def print_Geek(self): 
-        print(self.geek) 
+        print(self.name) 
   
 
 def my_function(text_to_display):
