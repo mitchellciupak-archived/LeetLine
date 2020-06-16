@@ -1,6 +1,12 @@
 # LeetLine
 A CLI created in Python to help me quiz myself on questions from Leetcode or Cracking the Coding Interview.
 
+# Features
+* File/Project Storage
+* Timing and Ranking
+* Easy Code Implamentation
+* Pomodoro Technique Timer
+
 # Procedure
 1. Answer a question
 2. Add that question to LeetLine
