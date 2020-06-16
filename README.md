@@ -1,5 +1,5 @@
 # LeetLine
-A CLI created in Python to help me quiz myself on questions from Leetcode or Cracking the Coding Interview.
+A CLI created in Python to help quiz yourself on questions from Leetcode or Cracking the Coding Interview.
 
 # Features
 * File/Project Storage
