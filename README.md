@@ -1,7 +1,12 @@
 # LeetLine
 A CLI created in Python to help quiz yourself on questions from Leetcode or Cracking the Coding Interview.
 
-# Features
+## Contributers
+### Paired Programing
+[Mitchell Ciupak](https://github.com/mitchellciupak)
+[Mason Webb](https://github.com/masonwebb33)
+
+## Features
 * File/Project Storage
 * Timing and Ranking
 * Easy Code Implamentation (C/C++ or Python)
@@ -9,7 +14,7 @@ A CLI created in Python to help quiz yourself on questions from Leetcode or Crac
 * Progress Tracking and Reports
 * Random Question Selector
 
-# Procedure
+## Procedure
 1. Answer a question
 2. Add that question to LeetLine
 3. Review the quesition on LeetLine later or randomly come accros it when using the randomier functionality
