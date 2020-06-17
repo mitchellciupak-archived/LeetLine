@@ -31,7 +31,7 @@ class Program:
             return self.dir
         except:
             self.dir = input("Please enter your folder path: ") 
-            while(!os.path.isdir(self.dir)):
+            while not (os.path.isdir(self.dir)M):
                 print("This folder was not found. Please Create and Try Again")
                 self.dir = input("Please enter your folder path: ") 
             return self.dir
@@ -65,6 +65,8 @@ class Program:
 
         print("Please review the following settings:")
         print("Your name is " + name + ", who speaks in the toung of" + lang + ", in the land of" + folder + " and you use " + editor + "as your wepon of chooice against evil!")
-
+        #TODO Give Option to change things 
+        #TODO Format by making variables bold or something
 
 obj = Program()
+obj.newUser()
