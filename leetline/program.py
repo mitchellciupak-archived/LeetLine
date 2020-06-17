@@ -6,6 +6,7 @@ import os
 import platform
 import sys
 
+# This class holds all important system information and user data
 class Program: 
 
     def __del__(self):
@@ -14,51 +15,56 @@ class Program:
         #Pickle it!
         print("Self Destructing .....")
 
-    #
-    def getOS:
-        print("Under Construction")
-        return 0
+    # Pull Operating System ("Windows,"Linux","Darwin")
+    def getOS(self):
+        self.os = platform.system()
+        return self.os
 
-    # Method creates the template to implament and slove a problem
+    # Pull Current DateTime (yyyyMMdd_hhmmssss)
     def getDateTime(self): 
-        return creation_date(path_to_file)
+        print ("Under Construction")
+        return "17760704_00000000"
 
-
-    def getPrefName:
-        print("Under Construction")
-        return 0
-
-    def getPrefDirectory:
-        print("Under Construction")
-        return 0
-
-    def getPrefLanguage:
-        print("Under Construction")
-        return 0
-
-    def getPrefEditor:
-        print("Under Construction")
-        return 0
-
-
-def creation_date(path_to_file):
-    """
-    Try to get the date that a file was created, falling back to when it was
-    last modified if that isn't possible.
-    See http://stackoverflow.com/a/39501288/1709587 for explanation.
-    """
-    if platform.system() == 'Windows':
-        return os.path.getctime(path_to_file)
-    else:
-        stat = os.stat(path_to_file)
+    def getPrefDirectory(self):
         try:
-            return stat.st_birthtime
-        except AttributeError:
-            # We're probably on Linux. No easy way to get creation dates here,
-            # so we'll settle for when its content was last modified.
-            return stat.st_mtime
+            os.path.isdir(self.dir)
+            return self.dir
+        except:
+            self.dir = input("Please enter your folder path: ") 
+            while(!os.path.isdir(self.dir)):
+                print("This folder was not found. Please Create and Try Again")
+                self.dir = input("Please enter your folder path: ") 
+            return self.dir
 
-    
-#TODO Debug
-obj = Problem()
-del obj
+    def getPrefEditor(self):
+        print("Under Construction")
+        return "notepad++"
+
+    def getPrefLanguage(self):
+        try:
+            return self.lang
+        except:
+            self.lang = input("Please enter your programming language: ") 
+            while(self.lang != "Python" | self.lang != "C/C++"):
+                print("I'm sorry, we are currently only supporting 'Python' or 'C/C++.'")
+                self.dir = input("Please enter your programming language: ") 
+            return self.dir
+
+    def getPrefName(self):
+        try:
+            return self.author
+        except:
+            self.author = input("Please enter your name/alias: ")
+            return self.author
+
+    def newUser(self):
+        name = self.getPrefName()
+        lang = self.getPrefLanguage()
+        folder = self.getPrefDirectory()
+        editor = self.getPrefEditor()
+
+        print("Please review the following settings:")
+        print("Your name is " + name + ", who speaks in the toung of" + lang + ", in the land of" + folder + " and you use " + editor + "as your wepon of chooice against evil!")
+
+
+obj = Program()
