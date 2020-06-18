@@ -4,14 +4,14 @@
 # Import
 import os
 import sys
-#import Program
+import Program
 
 class Problem: 
 
     def __init__(self):
         self.name = input("1. Please enter the problem name: ")
         self.source = input("2. Please enter a link or description of the source: ") 
-        #self.dateTimeCreated = Program.getDateTime()
+        self.dateTimeCreated = Program.getDateTime()
         self.createNewProblem()
 
     def __del__(self):
@@ -33,5 +33,5 @@ class Problem:
 
     
 #TODO Debug
-obj = Problem()
-del obj
+#obj = Problem()
+#del obj

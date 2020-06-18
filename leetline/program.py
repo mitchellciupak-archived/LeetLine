@@ -31,7 +31,7 @@ class Program:
             return self.dir
         except:
             self.dir = input("Please enter your folder path: ") 
-            while not (os.path.isdir(self.dir)M):
+            while not (os.path.isdir(self.dir)):
                 print("This folder was not found. Please Create and Try Again")
                 self.dir = input("Please enter your folder path: ") 
             return self.dir
@@ -45,17 +45,24 @@ class Program:
             return self.lang
         except:
             self.lang = input("Please enter your programming language: ") 
-            while(self.lang != "Python" | self.lang != "C/C++"):
+            while not(self.lang == "Python" or self.lang == "C/C++"):
                 print("I'm sorry, we are currently only supporting 'Python' or 'C/C++.'")
-                self.dir = input("Please enter your programming language: ") 
-            return self.dir
+                self.lang = input("Please enter your programming language: ") 
+            return self.lang
 
     def getPrefName(self):
         try:
             return self.author
         except:
             self.author = input("Please enter your name/alias: ")
-            return self.author
+        return self.author
+
+    def changeUser(self):
+        del self.author
+        del self.lang
+        del self.dir
+        del self.editor
+        self.newUser()
 
     def newUser(self):
         name = self.getPrefName()
@@ -63,10 +70,14 @@ class Program:
         folder = self.getPrefDirectory()
         editor = self.getPrefEditor()
 
-        print("Please review the following settings:")
-        print("Your name is " + name + ", who speaks in the toung of" + lang + ", in the land of" + folder + " and you use " + editor + "as your wepon of chooice against evil!")
-        #TODO Give Option to change things 
-        #TODO Format by making variables bold or something
+        print("\nPlease review the following settings:")
+        print("Your name is " + name + ", who speaks in the toung of " + lang + ", in the land of " + folder + " and you use " + editor + " as your wepon of choice against evil!\n")
+        confirmation = input("Press enter to continue or type 'This is stupid' to change your settings: ")
+        if(confirmation != ''):
+            self.changeUser()
+        #TODO Production
+        #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
 
-obj = Program()
-obj.newUser()
+
+#obj = Program()
+#obj.newUser()
