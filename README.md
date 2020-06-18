@@ -22,3 +22,6 @@ A CLI created in Python to help quiz yourself on questions from Leetcode or Crac
 
 ## Resources
 [LeetLine Wiki](https://github.com/mitchellciupak/LeetLine/wiki)
+
+[Move to Wiki 1](https://code.visualstudio.com/docs/python/python-tutorial)
+[Move to Wiki 2](https://trstringer.com/easy-and-nice-python-cli/)
