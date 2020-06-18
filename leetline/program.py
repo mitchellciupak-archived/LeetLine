@@ -37,8 +37,8 @@ class Program:
             return self.dir
 
     def getPrefEditor(self):
-        print("Under Construction")
-        return "notepad++"
+        self.editor = "VS Code"
+        return self.editor
 
     def getPrefLanguage(self):
         try:
@@ -70,14 +70,14 @@ class Program:
         folder = self.getPrefDirectory()
         editor = self.getPrefEditor()
 
-        print("\nPlease review the following settings:")
+        print("Please review the following settings:")
         print("Your name is " + name + ", who speaks in the toung of " + lang + ", in the land of " + folder + " and you use " + editor + " as your wepon of choice against evil!\n")
-        confirmation = input("Press enter to continue or type 'This is stupid' to change your settings: ")
+        confirmation = input("Press enter to continue or type 'I have a small penis' to change your settings: ")
         if(confirmation != ''):
             self.changeUser()
         #TODO Production
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
 
 
-#obj = Program()
-#obj.newUser()
+obj = Program()
+obj.newUser()
