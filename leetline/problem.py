@@ -30,8 +30,3 @@ class Problem:
             f.write("Write in basic template with descripion and everything")
             fptr.close()
         }
-
-    
-#TODO Debug
-#obj = Problem()
-#del obj

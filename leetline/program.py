@@ -77,7 +77,3 @@ class Program:
             self.changeUser()
         #TODO Production
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
-
-
-obj = Program()
-obj.newUser()
