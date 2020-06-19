@@ -6,6 +6,8 @@ import os
 import sys
 import Program
 
+## TODO Need Categories like Trees or Something 
+
 class Problem: 
 
     def __init__(self):
