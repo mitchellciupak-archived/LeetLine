@@ -4,7 +4,7 @@
 # Import
 import os
 import sys
-import Program
+from program import Program
 
 ## TODO Need Categories like Trees or Something 
 
@@ -23,12 +23,11 @@ class Problem:
 
     # Method creates the template to implament and slove a problem
     def createNewProblem(self): 
-        self.foldername = Program.getPrefDirectory + "\" + self.name
+        self.foldername = Program.getPrefDirectory + "/" + self.name
         self.filename = self.foldername + ''.join(word.title() for word in self.name.split(' '))
 
         #Create Project File
-        if(Program.getPrefLanguage == 'Python') {
+        if(Program.getPrefLanguage == 'Python'):
             fptr = open(self.filename + ".py","w+")
             f.write("Write in basic template with descripion and everything")
             fptr.close()
-        }
