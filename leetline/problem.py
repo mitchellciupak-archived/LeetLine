@@ -20,7 +20,7 @@ class Problem:
     def __del__(self):
         #Trigger Deconstructor by: del obj
         #Pickle it! 
-        print("Self Destructing .....")
+        print("Self Destructing Problem.....")
 
     # Method creates the template to implament and slove a problem
     def createNewProblem(self): 

@@ -5,17 +5,30 @@
 import os
 import platform
 import sys
+import pickle
 
 #TODO Need the falttening to act as constants when instatiating this class multiple times
 
 # This class holds all important system information and user data
 class Program: 
+    def __init__(self): 
+        #Check for pickle
+        try:
+            pickle_in = open("dict.pickle","rb")
+            example_dict = pickle.load(pickle_in)
+            pickle_in.close
+            print(example_dict)
+        except: 
+            print("Hello Program")
 
     def __del__(self):
-        #Trigger Deconstructor by: del obj
+        self.test = "test1"
+        pickle_out = open("dict.pickle","wb")
+        pickle.dump(self.test,pickle_out)
+        pickle_out.close()
         #TODO Set Some Values to null before pickiling
         #Pickle it!
-        print("Self Destructing .....")
+        print("Self Destructing Program .....")
 
     # Pull Operating System ("Windows,"Linux","Darwin")
     def getOS(self):
