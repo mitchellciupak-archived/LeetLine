@@ -19,7 +19,7 @@ def main():
     prog = Program()
     
     #create new problem
-    #newProb = Problem()
+    newProb = Problem()
 
 
 

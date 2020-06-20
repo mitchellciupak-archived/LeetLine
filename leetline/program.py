@@ -20,7 +20,6 @@ class Program:
         else:
             self = pickle.load(pickle_in)
             pickle_in.close
-            print(self.test)
 
     def __del__(self):
         try: 
@@ -75,8 +74,7 @@ class Program:
         folder = self.getPrefDirectory()
         editor = self.getPrefEditor()
 
-        print("Please review the following settings:")
-        print("Your name is " + name + ", who speaks in the toung of " + lang + ", in the land of " + folder + " and you use " + editor + " as your wepon of choice against evil!\n")
+        print("Please review the following settings: Your name is " + name + ", who speaks in the toung of " + lang + ", in the land of " + folder + " and you use " + editor + " as your weapon of choice against evil!\n")
         confirmation = input("Press enter to continue or type 'I have a small penis' to change your settings: ")
         if(confirmation != ''):
             self.newUser()
