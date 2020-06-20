@@ -9,7 +9,7 @@ def main():
 
     #init
     #TODO Integrate Pickle, then check if new user exists on startup
-    Program().newUser()
+    # sys = Program().newUser()
     
     #create new problem
     newProb = Problem()

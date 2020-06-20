@@ -6,6 +6,8 @@ import os
 import platform
 import sys
 
+#TODO Need the falttening to act as constants when instatiating this class multiple times
+
 # This class holds all important system information and user data
 class Program: 
 
