@@ -16,20 +16,21 @@ class Program:
         try:
             pickle_in = open("flats/program.pickle","rb")
         except: 
-            print("Program Pickel Failed (User Data Currupted)")
+            self.newUser()
         else:
             self = pickle.load(pickle_in)
             pickle_in.close
             print(self.test)
 
     def __del__(self):
-        self.test = "test1"
-        #TODO Set Some Values to null before pickiling
-        #Pickle it!
-        pickle_out = open("flats/program.pickle","wb")
-        pickle.dump(self,pickle_out)
-        pickle_out.close()
-        print("Self Destructing Program .....")
+        try: 
+            #Set Changeable Members to null before flattening
+            del self.dateTime
+        finally:
+            #Flatten Class
+            pickle_out = open("flats/program.pickle","wb")
+            pickle.dump(self,pickle_out)
+            pickle_out.close()
 
     # Pull Operating System ("Windows,"Linux","Darwin")
     def getOS(self):
