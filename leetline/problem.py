@@ -26,8 +26,9 @@ class Problem:
     def createNewProblem(self): 
         self.filename = ''.join(word.title() for word in self.name.split(' '))
 
-        # self.foldername = "C:/leetline" + "/" + self.filename + "/" + self.filename
-        self.foldername = Program.getPrefDirectory() + "/" + self.filename + "/" + self.filename
+        #TODO Debug
+        self.foldername = "C:/leetline" + "/" + self.filename + "/" + self.filename
+        #self.foldername = Program.getPrefDirectory() + "/" + self.filename + "/" + self.filename
 
         #Create Project File
         if(Program.getPrefLanguage == 'Python'):

@@ -2,22 +2,30 @@
 #Created On: 20200612
 
 import sys
+import os
 from program import Program
 from problem import Problem
+
+def checkFlats():
+    #Check for the existance of pickles
+    path = 'flats/' 
+    if not os.path.exists(path):
+        os.makedirs(path)
 
 def main():
 
     #init
-    #TODO Integrate Pickle, then check if new user exists on startup
-    # sys = Program().newUser()
+    checkFlats()
+    prog = Program()
     
     #create new problem
-    newProb = Problem()
+    #newProb = Problem()
 
 
 
 if __name__ == '__main__':
     main()
+
 
 def checkArgs():
     print('in main')

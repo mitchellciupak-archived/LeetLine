@@ -12,22 +12,23 @@ import pickle
 # This class holds all important system information and user data
 class Program: 
     def __init__(self): 
-        #Check for pickle
+        # Check for New User / Previously Instantiated Class
         try:
-            pickle_in = open("dict.pickle","rb")
-            example_dict = pickle.load(pickle_in)
-            pickle_in.close
-            print(example_dict)
+            pickle_in = open("flats/program.pickle","rb")
         except: 
-            print("Hello Program")
+            print("Program Pickel Failed (User Data Currupted)")
+        else:
+            self = pickle.load(pickle_in)
+            pickle_in.close
+            print(self.test)
 
     def __del__(self):
         self.test = "test1"
-        pickle_out = open("dict.pickle","wb")
-        pickle.dump(self.test,pickle_out)
-        pickle_out.close()
         #TODO Set Some Values to null before pickiling
         #Pickle it!
+        pickle_out = open("flats/program.pickle","wb")
+        pickle.dump(self,pickle_out)
+        pickle_out.close()
         print("Self Destructing Program .....")
 
     # Pull Operating System ("Windows,"Linux","Darwin")
