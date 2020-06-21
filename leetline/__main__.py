@@ -18,10 +18,12 @@ def main():
     if not (args):
         llhelp()
     else:
-        for arg in args:
-            print('passed argument :: {}'.format(arg))
+        print (args)
 
-
+    #run an argument
+    if (args[0] == 'n' or args[0] == 'new'):
+        newProb = Problem()
+        newProb.createNewProblem()
     
 
     # while(sys.argv[1:] != 'end'):
