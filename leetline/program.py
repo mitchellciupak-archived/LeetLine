@@ -23,7 +23,7 @@ class Program:
 
     def __del__(self):
         try: 
-            #Set Changeable Members to null before flattening
+            #Set chaning Members to null before flattening
             del self.dateTime
         finally:
             #Flatten Class
@@ -80,3 +80,12 @@ class Program:
             self.newUser()
         #TODO Production
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
+
+
+#Helper Functions Related to Program
+
+## Check for the existance of pickles
+def checkFlats():
+    path = 'flats/' 
+    if not os.path.exists(path):
+        os.makedirs(path)
