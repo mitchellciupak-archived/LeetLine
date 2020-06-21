@@ -70,6 +70,10 @@ class Program:
         self.author = input("Please enter your name/alias: ")
         return self.author
 
+    def newProblemID(self):
+        self.problemID += 1
+        return self.problemID
+
     def newUser(self):
         name = self.getPrefName()
         lang = self.getPrefLanguage()
@@ -80,8 +84,12 @@ class Program:
         confirmation = input("Press enter to continue or type 'I have a small penis' to change your settings: ")
         if(confirmation != ''):
             self.newUser()
+
         #TODO Production
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
+
+        #resetProblemID
+        self.problemID = 0
 
 
 #Helper Functions Related to Program

@@ -15,12 +15,14 @@ class Problem:
         self.name = input("1. Please enter the problem name: ")
         self.source = input("2. Please enter a link or description of the source: ") 
         self.dateTimeCreated = program.getDateTime()
+        self.id = program.newProblemID()
         self.createNewProblem()
 
     def __del__(self):
-        #Trigger Deconstructor by: del obj
-        #Pickle it! 
-        print("Self Destructing Problem.....")
+        #Flatten Class
+        pickle_out = open("flats/prob" + self.id.str() + ".pickle","wb")
+        pickle.dump(self,pickle_out)
+        pickle_out.close()
 
     # Method creates the template to implament and slove a problem
     def createNewProblem(self): 
