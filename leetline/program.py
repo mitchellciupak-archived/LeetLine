@@ -17,6 +17,10 @@ class Program:
             pickle_in = open("flats/program.pickle","rb")
         except: 
             self.newUser()
+            #Flatten Class
+            pickle_out = open("flats/program.pickle","wb")
+            pickle.dump(self,pickle_out)
+            pickle_out.close()
         else:
             self = pickle.load(pickle_in)
             pickle_in.close
@@ -70,11 +74,15 @@ class Program:
         self.author = input("Please enter your name/alias: ")
         return self.author
 
+    def getProbCount(self):
+        return self.probCount
+
     def newProblemID(self):
         self.probCount += 1
         return self.probCount
 
     def newUser(self):
+        self.probCount = 0
         name = self.getPrefName()
         lang = self.getPrefLanguage()
         folder = self.getPrefDirectory()
@@ -87,9 +95,6 @@ class Program:
 
         #TODO Production
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
-
-        #resetProblemID
-        self.probCount = 0
 
 
 #Helper Functions Related to Program

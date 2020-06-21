@@ -12,13 +12,13 @@ def getProbList():
 
     for x in prog.probCount:
         try:
-            pickle_in = open("flats/program" + x.str() + ".pickle","rb")
+            pickle_in = open("flats/program" + str(x) + ".pickle","rb")
         except: 
-            print("Loading Problem " + x.str() + " has failed.")
+            print("Loading Problem " + str(x) + " has failed.")
         else:
             inprob = pickle.load(pickle_in)
             pickle_in.close 
-            probs.append(inprob) 
+            probs.append(inprob)
 
        
 

@@ -28,6 +28,8 @@ def main():
     #List all Problems
     if (args[0] == 'ls' or args[0] == 'list'):
         getProbList()
+    if (args[0] == 'debug'):
+        print(prog.getProbCount())
 
     
 
