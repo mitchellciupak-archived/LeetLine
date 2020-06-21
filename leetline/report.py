@@ -25,8 +25,10 @@ def getProbList():
             probs.append(inprob)
 
        
-def getData( ):
-    with open("output.txt") as f:
+def getData():
+    #TODO Adapt to other uses (Right now it is just for qucik sort)
+    path = input("Please enter the full path of the output: ")
+    with open(path) as f:
         lines = f.readlines()
     n_size = []
     cpu_ticks = []
@@ -39,7 +41,7 @@ def getData( ):
     plt.plot(n_size, cpu_ticks)
     plt.xlabel("Number of longs to sort (N)")
     plt.ylabel("CPU clock ticks required to sort array")
-    plt.title("size of array vs time to sort")
+    plt.title("Size of Array vs Time to Sort")
     #plt.show()
     plt.savefig('plots/quick_sort_01.png')
 
