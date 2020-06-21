@@ -25,6 +25,8 @@ class Program:
         try: 
             #Set chaning Members to null before flattening
             del self.dateTime
+        except:
+            pass
         finally:
             #Flatten Class
             pickle_out = open("flats/program.pickle","wb")
@@ -89,3 +91,7 @@ def checkFlats():
     path = 'flats/' 
     if not os.path.exists(path):
         os.makedirs(path)
+
+## print all commands available at the moment
+def llhelp():
+    print("The Help Function is Under Construction")
