@@ -71,8 +71,8 @@ class Program:
         return self.author
 
     def newProblemID(self):
-        self.problemID += 1
-        return self.problemID
+        self.probCount += 1
+        return self.probCount
 
     def newUser(self):
         name = self.getPrefName()
@@ -89,7 +89,7 @@ class Program:
         #print("Great! Remember you can chage your settings anytime by using the command 'leetline.exe changeUser'")
 
         #resetProblemID
-        self.problemID = 0
+        self.probCount = 0
 
 
 #Helper Functions Related to Program

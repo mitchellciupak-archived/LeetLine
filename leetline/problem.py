@@ -11,11 +11,11 @@ from program import Program
 class Problem: 
 
     def __init__(self):
-        program = Program()
+        prog = Program()
         self.name = input("1. Please enter the problem name: ")
         self.source = input("2. Please enter a link or description of the source: ") 
-        self.dateTimeCreated = program.getDateTime()
-        self.id = program.newProblemID()
+        self.dateTimeCreated = prog.getDateTime()
+        self.id = prog.newProblemID()
         self.createNewProblem()
 
     def __del__(self):
@@ -30,10 +30,10 @@ class Problem:
 
         #TODO Debug
         self.foldername = "C:/leetline" + "/" + self.filename + "/" + self.filename
-        #self.foldername = Program.getPrefDirectory() + "/" + self.filename + "/" + self.filename
+        #self.foldername = prog.getPrefDirectory() + "/" + self.filename + "/" + self.filename
 
         #Create Project File
-        if(Program.getPrefLanguage == 'Python'):
+        if(prog.getPrefLanguage == 'Python'):
             fptr = open(self.filename + ".py","w+")
             fptr.write("Write in basic template with descripion and everything")
             fptr.close()

@@ -5,6 +5,7 @@ import sys
 import os
 from program import Program, checkFlats, llhelp
 from problem import Problem
+from report import getProbList
 
 
 def main():
@@ -20,10 +21,14 @@ def main():
     else:
         print (args)
 
-    #run an argument
+    #Create New Problem Command
     if (args[0] == 'n' or args[0] == 'new'):
         newProb = Problem()
         newProb.createNewProblem()
+    #List all Problems
+    if (args[0] == 'ls' or args[0] == 'list'):
+        getProbList()
+
     
 
     # while(sys.argv[1:] != 'end'):
