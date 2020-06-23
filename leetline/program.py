@@ -12,20 +12,26 @@ import pickle
 
 # This class holds all important system information and user data
 class Program: 
+    #Unflatten Class
+    def load(self):
+            f = open("flats/program.pickle","rb")
+            tmp_dict = pickle.load(f)
+            f.close()          
+            self.__dict__.update(tmp_dict) 
+
+    #Flatten Class
+    def save(self):
+        f = open("flats/program.pickle","wb")
+        pickle.dump(self.__dict__, f, 2)
+        f.close()
+
     def __init__(self): 
         # Check for New User / Previously Instantiated Class
         try:
-            pickle_in = open("flats/program.pickle","rb")
+            self.load()
         except: 
             self.newUser()
-            #Flatten Class
-            pickle_out = open("flats/program.pickle","wb")
-            pickle.dump(self,pickle_out)
-            pickle_out.close()
-        else:
-            self = pickle.load(pickle_in)
-            print("slef: " + str(self.dir))
-            pickle_in.close
+            self.save()
 
     def __del__(self):
         try: 
@@ -34,10 +40,7 @@ class Program:
         except:
             pass
         finally:
-            #Flatten Class
-            pickle_out = open("flats/program.pickle","wb")
-            pickle.dump(self,pickle_out)
-            pickle_out.close()
+            self.save()
 
     # Pull Operating System ("Windows,"Linux","Darwin")
     def getOS(self):

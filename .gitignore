@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 # Serialization
-.flats
+flats/
+flats/program.pickle

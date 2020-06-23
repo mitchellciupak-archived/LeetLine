@@ -18,18 +18,17 @@ def main():
     args = sys.argv[1:]
     if not (args):
         llhelp()
-    else:
-        print (args)
-
     #Create New Problem Command
-    if (args[0] == 'n' or args[0] == 'new'):
+    elif (args[0] == 'n' or args[0] == 'new'):
         newProb = Problem()
         newProb.createNewProblem()
     #List all Problems
-    if (args[0] == 'ls' or args[0] == 'list'):
+    elif (args[0] == 'ls' or args[0] == 'list'):
         getProbList()
-    if (args[0] == 'debug'):
+    elif (args[0] == 'debug'):
         print(prog.getProbCount())
+    else:
+        print (args)
 
     
 
