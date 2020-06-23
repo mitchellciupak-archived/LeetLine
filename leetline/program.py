@@ -5,9 +5,10 @@
 import os
 import platform
 import sys
-import pickle
+import pickle 
 
 #TODO Need the falttening to act as constants when instatiating this class multiple times
+#TODO Head these instructions https://stackoverflow.com/questions/2709800/how-to-pickle-yourself
 
 # This class holds all important system information and user data
 class Program: 
@@ -23,6 +24,7 @@ class Program:
             pickle_out.close()
         else:
             self = pickle.load(pickle_in)
+            print("slef: " + str(self.dir))
             pickle_in.close
 
     def __del__(self):
