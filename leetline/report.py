@@ -12,7 +12,7 @@ from problem import Problem
 #Load Problem Objects into Dictionary and List
 def getProbList(prog):
     probs = []
-    for x in range(0,prog.probCount):
+    for x in range(1,prog.probCount + 1):
         try:
             prob = Problem.loadbyID(x)
         except: 
@@ -24,8 +24,11 @@ def getProbList(prog):
 
 def printProbList(prog):
     probs = getProbList(prog)
-    for x in range(0,prog.probCount):
-        print(probs[x].name)
+    if not (probs):
+        print ("No Problems Yet :/")
+    else:
+        for x in range(0,prog.probCount):
+            print(probs[x].name)
 
     
 
