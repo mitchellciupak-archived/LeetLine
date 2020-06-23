@@ -5,8 +5,9 @@ import sys
 import os
 from program import Program, checkFlats, llhelp
 from problem import Problem
-from report import getProbList
+from report import printProbList
 
+# All instances of Program Class must be called from main
 
 def main():
 
@@ -20,10 +21,10 @@ def main():
         llhelp()
     #Create New Problem Command
     elif (args[0] == 'n' or args[0] == 'new'):
-        newProb = Problem(prog.newProblemID())
+        newProb = Problem.createNewProblem(prog)
     #List all Problems
     elif (args[0] == 'ls' or args[0] == 'list'):
-        getProbList()
+        printProbList(prog)
     elif (args[0] == 'debug'):
         print(prog.getProbCount())
     else:

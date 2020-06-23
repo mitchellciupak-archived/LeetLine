@@ -8,7 +8,6 @@ import sys
 import pickle 
 
 #TODO Need the falttening to act as constants when instatiating this class multiple times
-#TODO Head these instructions https://stackoverflow.com/questions/2709800/how-to-pickle-yourself
 
 # This class holds all important system information and user data
 class Program: 
@@ -16,13 +15,14 @@ class Program:
     def load(self):
         f = open("flats/program.pickle","rb")
         tmp_dict = pickle.load(f)
-        f.close()          
+        f.close()    
+        self.__dict__.clear()      
         self.__dict__.update(tmp_dict) 
 
     #Flatten Class
     def save(self):
         f = open("flats/program.pickle","wb")
-        pickle.dump(self.__dict__, f, 2)
+        pickle.dump(self.__dict__, f)
         f.close()
 
     def __init__(self): 

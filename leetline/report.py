@@ -7,24 +7,27 @@ import sys
 #import matplotlib.pyplot as plt
 import pickle
 from program import Program
+from problem import Problem
 
 #Load Problem Objects into Dictionary and List
-def getProbList():
-    #TODO Pull one and add to dict for x in cars
-    prog = Program()
+def getProbList(prog):
     probs = []
-
-    print("Prob Count: " + str(prog.probCount))
-
     for x in range(0,prog.probCount):
         try:
-            pickle_in = open("flats/program" + str(x) + ".pickle","rb")
+            prob = Problem.loadbyID(x)
         except: 
-            print("Loading Problem " + str(x) + " has failed.")
+            print("Failed Loading Problem " + str(x))
         else:
-            inprob = pickle.load(pickle_in)
-            pickle_in.close 
-            probs.append(inprob)
+            probs.append(prob)
+
+    return probs
+
+def printProbList(prog):
+    probs = getProbList(prog)
+    for x in range(0,prog.probCount):
+        print(probs[x].name)
+
+    
 
        
 def getData():
