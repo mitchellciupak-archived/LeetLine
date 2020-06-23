@@ -11,23 +11,36 @@ from program import Program
 ## TODO Need Categories like Trees or Something 
 
 class Problem: 
+    #Unflatten Class
+    def load(self):
+        f = open("flats/prob" + str(self.id) + ".pickle","rb")
+        tmp_dict = pickle.load(f)
+        f.close()          
+        self.__dict__.update(tmp_dict) 
 
-    def __init__(self):
+    #Flatten Class
+    def save(self):
+        f = open("flats/prob" + str(self.id) + ".pickle","wb")
+        pickle.dump(self.__dict__, f, 2)
+        f.close()
+
+    def __init__(self, id):
         self.prog = Program() #TODO May just want to inherrit prog
-        self.name = input("1. Please enter the problem name: ")
-        self.source = input("2. Please enter a link or description of the source: ") 
-        self.dateTimeCreated = self.prog.getDateTime()
-        self.id = self.prog.newProblemID()
-        self.createNewProblem()
+        self.id = id
+        try: 
+            self.load()
+        except:    
+            self.createNewProblem()
 
     def __del__(self):
-        #Flatten Class
-        pickle_out = open("flats/prob" + str(self.id) + ".pickle","wb")
-        pickle.dump(self,pickle_out)
-        pickle_out.close()
+        self.save()
 
     # Method creates the template to implament and slove a problem
     def createNewProblem(self): 
+        self.name = input("1. Please enter the problem name: ")
+        self.source = input("2. Please enter a link or description of the source: ") 
+        self.dateTimeCreated = self.prog.getDateTime()
+
         self.filename = ''.join(word.title() for word in self.name.split(' '))
 
         #TODO Debug

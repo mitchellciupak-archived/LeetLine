@@ -14,10 +14,10 @@ import pickle
 class Program: 
     #Unflatten Class
     def load(self):
-            f = open("flats/program.pickle","rb")
-            tmp_dict = pickle.load(f)
-            f.close()          
-            self.__dict__.update(tmp_dict) 
+        f = open("flats/program.pickle","rb")
+        tmp_dict = pickle.load(f)
+        f.close()          
+        self.__dict__.update(tmp_dict) 
 
     #Flatten Class
     def save(self):

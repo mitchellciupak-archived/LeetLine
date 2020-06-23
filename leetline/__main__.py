@@ -20,8 +20,7 @@ def main():
         llhelp()
     #Create New Problem Command
     elif (args[0] == 'n' or args[0] == 'new'):
-        newProb = Problem()
-        newProb.createNewProblem()
+        newProb = Problem(prog.newProblemID())
     #List all Problems
     elif (args[0] == 'ls' or args[0] == 'list'):
         getProbList()

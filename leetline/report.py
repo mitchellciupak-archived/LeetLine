@@ -14,7 +14,9 @@ def getProbList():
     prog = Program()
     probs = []
 
-    for x in prog.probCount:
+    print("Prob Count: " + str(prog.probCount))
+
+    for x in range(0,prog.probCount):
         try:
             pickle_in = open("flats/program" + str(x) + ".pickle","rb")
         except: 
