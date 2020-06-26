@@ -5,7 +5,7 @@ import sys
 import os
 from program import Program, checkFlats, llhelp
 from problem import Problem
-from report import printProbList
+from report import printProbList, getRandProb
 
 # All instances of Program Class must be called from main
 
@@ -25,6 +25,9 @@ def main():
     #List all Problems
     elif (args[0] == 'ls' or args[0] == 'list'):
         printProbList(prog)
+    #Select Random Problem
+    elif (args[0] == 'r' or args[0] == 'rand'):
+        prob = getRandProb(prog)
     elif (args[0] == 'debug'):
         print(prog.getProbCount())
     else:

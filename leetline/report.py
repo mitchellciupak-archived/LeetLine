@@ -6,6 +6,7 @@ import sys
 #import numpy as np
 #import matplotlib.pyplot as plt
 import pickle
+import random
 from program import Program
 from problem import Problem
 
@@ -30,9 +31,11 @@ def printProbList(prog):
         for x in range(0,prog.probCount):
             print(probs[x].name)
 
-    
 
-       
+def getRandProb(prog):
+    probs = getProbList(prog)
+    return probs[random.randrange(0, len(probs), 1)]
+
 def getData():
     #TODO Adapt to other uses (Right now it is just for qucik sort)
     path = input("Please enter the full path of the output: ")
