@@ -9,16 +9,16 @@ A CLI created in Python to help quiz yourself on technical interview questions f
 
 ## Features
 * File/Project Storage
+* Random Question Selector
 * Timing and Ranking
-* Easy Code Implamentation (C/C++ or Python)
+* Easy Code Implamentation for C/C++ or Python
 * Pomodoro Technique Timer
 * Progress Tracking and Reports
-* Random Question Selector
 
 ## Procedure
 1. Answer a question
 2. Add that question to LeetLine
-3. Review the quesition on LeetLine later or randomly come accros it when using the randomier functionality
+3. Review the quesition on LeetLine later or randomly come accros it when using the randomizer functionality
 
 ## Resources
 [LeetLine Wiki](https://github.com/mitchellciupak/LeetLine/wiki)
