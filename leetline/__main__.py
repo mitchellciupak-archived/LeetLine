@@ -28,6 +28,7 @@ def main():
     #Select Random Problem
     elif (args[0] == 'r' or args[0] == 'rand'):
         prob = getRandProb(prog)
+        #TODO Need To Create an Immediate Questionaire to tell exactly what you want to do with the problem
     elif (args[0] == 'debug'):
         print(prog.getProbCount())
     else:
