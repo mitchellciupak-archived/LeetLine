@@ -22,3 +22,6 @@ A CLI created in Python to help quiz yourself on technical interview questions f
 
 ## Resources
 [LeetLine Wiki](https://github.com/mitchellciupak/LeetLine/wiki)
+
+
+I'm only writing this because i need a commit for the day. I'm sorry Jesus. 
