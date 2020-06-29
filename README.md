@@ -16,9 +16,11 @@ A CLI created in Python to help quiz yourself on technical interview questions f
 * Progress Tracking and Reports
 
 ## Procedure
-1. Answer a question
+1. Find a Question
 2. Add that question to LeetLine
-3. Review the quesition on LeetLine later or randomly come accros it when using the randomizer functionality
+3. Start Developing Project using automated project creation
+4. Solve and Review the question in preffered IDE/editor analyzing complexity using leetline reports
+5. Later On .... Review the quesition on LeetLine or randomly come accros it when using the randomizer functionality
 
 ## Resources
 [LeetLine Wiki](https://github.com/mitchellciupak/LeetLine/wiki)
