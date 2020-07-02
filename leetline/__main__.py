@@ -9,6 +9,8 @@ from report import printProbList, getRandProb
 
 # All instances of Program Class must be called from main
 
+#TODO Learn VIM Extension
+
 def main():
 
     #init
@@ -25,7 +27,7 @@ def main():
     #List all Problems
     elif (args[0] == 'ls' or args[0] == 'list'):
         printProbList(prog)
-    #Select Random Problem
+    #Select Random Problezm
     elif (args[0] == 'r' or args[0] == 'rand'):
         prob = getRandProb(prog)
         #TODO Need To Create an Immediate Questionaire to tell exactly what you want to do with the problem
