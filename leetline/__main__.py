@@ -7,7 +7,7 @@ from program import Program, checkFlats, llhelp
 from problem import Problem
 from report import printProbList, getRandProb
 
-# All instances of Program Class must be called from main
+#All instances of Program Class must be called from main
 
 #TODO Learn VIM Extension
 
@@ -31,6 +31,8 @@ def main():
     elif (args[0] == 'r' or args[0] == 'rand'):
         prob = getRandProb(prog)
         #TODO Need To Create an Immediate Questionaire to tell exactly what you want to do with the problem
+        print(prob.name)
+        print("Ello Govner, what do you want to do with this question?")
     elif (args[0] == 'debug'):
         print(prog.getProbCount())
     else:
