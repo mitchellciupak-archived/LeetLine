@@ -15,7 +15,7 @@ A CLI created in Python to help quiz yourself on technical interview questions f
 * Pomodoro Technique Timer
 * Progress Tracking and Reports
 
-## Procedure
+## Getting Started
 1. Find a Question
 2. Add that question to LeetLine
 3. Start Developing Project using automated project creation
