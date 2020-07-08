@@ -1,5 +1,5 @@
 # LeetLine
-A CLI created in Python to help quiz yourself on technical interview questions from Leetcode, Cracking the Coding Interview or Personal Experience.
+A CLI created in Python to help quiz yourself on technical questions from Leetcode, Cracking the Coding Interview or Personal Experience.
 
 ## Contributers
 ##### Paired Programing
