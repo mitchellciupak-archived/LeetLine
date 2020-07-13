@@ -1,4 +1,6 @@
 # LeetLine
+** Notice: Development Canceled till Futher Notice 2020/07/13 ** 
+
 A CLI created in Python to help quiz yourself on technical questions from Leetcode, Cracking the Coding Interview or Personal Experience.
 
 ## Contributers
@@ -10,6 +12,7 @@ A CLI created in Python to help quiz yourself on technical questions from Leetco
 ## Features
 * File/Project Storage
 * Random Question Selector
+## Coming soon
 * Timing and Ranking
 * Easy Code Implamentation for C/C++ or Python
 * Pomodoro Technique Timer
