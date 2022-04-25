@@ -3,7 +3,7 @@
 
 A CLI created in Python to help quiz yourself on technical questions from Leetcode, Cracking the Coding Interview or Personal Experience.
 
-## Contributers
+## Contributors
 ##### Paired Programing
 [Mitchell Ciupak](https://github.com/mitchellciupak)
 
